@@ -13,3 +13,8 @@ entity Nor8Way is
 			h:   in  STD_LOGIC;
 			q:   out STD_LOGIC);
 end entity;
+
+architecture NOR8way_FOLKS of NOR8way is
+begin
+   q <= not (a or b or c or d or e or f or g or h);
+end NOR8way_FOLKS;
