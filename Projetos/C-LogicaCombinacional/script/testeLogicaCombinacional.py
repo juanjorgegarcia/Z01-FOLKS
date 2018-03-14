@@ -40,13 +40,13 @@ class tstLogiComb(object):
         self.addSrc(work)
         self.addTst(work)
 
-    def prit(self):
+    def print(self):
         logLogiComb("---------- Portas Logicas            ")
         logLogiComb("---------- 03-Logica-Combinacional   ")
 
 if __name__ == "__main__":
     tstLogiComb = tstLogiComb()
-    tstLogiComb.prit();
+    tstLogiComb.print();
     tstLogiComb.add(tstLogiComb.work)
     tstLogiComb.work.run()
 
