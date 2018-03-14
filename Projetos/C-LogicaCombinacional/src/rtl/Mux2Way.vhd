@@ -8,3 +8,15 @@ entity Mux2Way is
 			sel: in  STD_LOGIC;
 			q:   out STD_LOGIC);
 end entity;
+
+architecture Mux2way_FOLKS of Mux2way is
+begin
+process (a,b,sel) is
+begin
+   if (sel = '0') then
+q<=a;
+	else 
+q<=b;
+	end if;
+end process;
+end Mux2way_FOLKS;
