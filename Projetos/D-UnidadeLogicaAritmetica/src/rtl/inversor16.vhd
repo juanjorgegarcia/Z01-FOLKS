@@ -16,4 +16,6 @@ architecture rtl of inversor16 is
 
 begin
 
+y <= NOT a when z = '1' else a;
+
 end architecture;
