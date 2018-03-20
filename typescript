@@ -1,0 +1,434 @@
+Script iniciado em Ter 20 Mar 2018 17:50:48 -03
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS[00m$ ls
+[0m[01;34mAulas[0m            LICENSE   requirements.txt  typescript
+INTEGRANTES.txt  [01;34mProjetos[0m  test.txt
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS[00m$ Projetos
+Projetos: comando não encontrado
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS[00m$ ProjetoscProjetosdProjetos Projetos[C[C[C[C[C[C[C[C
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos[00m$ s[Kcd scripts[K
+bash: cd: script: Arquivo ou diretório não encontrado
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos[00m$ ç[Kls
+[0m[01;34m0-Infra[0m         [01;34mB-CircuitosIntegrados[0m  [01;34mD-UnidadeLogicaAritmetica[0m
+[01;34mA-Transistores[0m  [01;34mC-LogicaCombinacional[0m  [01;34mtools[0m
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos[00m$ D[Kcd D
+bash: cd: D: Arquivo ou diretório não encontrado
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos[00m$ cd D-UnidadeeLogicaAritmetica/
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogiicaAritmetica[00m$ s[Kcd s
+script/ src/    
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogiicaAritmetica[00m$ cd s
+script/ src/    
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogiicaAritmetica[00m$ cd script/
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogiicaAritmetica/script[00m$ cd script/D-UnidadeLogicaAritmetica/script/[K[Kpython u[K
+testeULA.py  vunit_out/   
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogiicaAritmetica/script[00m$ python 
+testeULA.py  vunit_out/   
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogiicaAritmetica/script[00m$ python testeULA.py 
+Traceback (most recent call last):
+  File "testeULA.py", line 17, in <module>
+    from termcolor import colored
+ImportError: No module named termcolor
+]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogiicaAritmetica/script[00m$ source activate root
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UniddadeLogicaAritmetica/script[00m$ atom
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UniddadeLogicaAritmetica/script[00m$ atomsource activate root
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UniddadeLogicaAritmetica/script[00m$ source activate rootatom[Ksource activate root[1Ppython testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(20): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): (vcom-1581) No feasible entries for infix operator '='.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(23): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(27): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UniddadeLogicaAritmetica/script[00m$ [K[A(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(20): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Warning: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 16 is not equal to right length 1).
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(23): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(27): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(20): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): (vcom-1581) No feasible entries for infix operator '='.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(23): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(27): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(20): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(23): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(27): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(21): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(23): near "15": (vcom-1576) expecting ']'.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(28): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(21): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(24): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(28): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(21): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(24): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(28): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(20): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(26): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ ^C
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(20): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): (vcom-1581) No feasible entries for infix operator '='.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(26): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(20): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(26): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(20): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(26): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(20): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(26): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(22): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(24): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(28): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(21): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(24): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(28): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(21): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(24): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(28): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(21): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(24): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(28): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[31;1mfailed[0m[m
+[0m[m=== Command used: ===
+/home/josefernando/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/vcom -quiet -modelsimini "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/modelsim/modelsim.ini" -2008 -work lib "/home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+[0m[m
+[0m[m=== Command output: ===
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(21): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(24): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC.
+** Error: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd(28): VHDL Compiler exiting
+
+[0m[31;1mCompile failed
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[32;1mpassed[0m[m
+[0m[m[0m[32;1mCompile passed
+[0m
+Starting lib.tb_comparador16.all
+Output file: vunit_out/test_output/lib.tb_comparador16.all_53751435b7028e85b030e707046b124bb6cda23d/output.txt
+# vsim -wlf /home/josefernando/Documentos/projetos\ git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/test_output/lib.tb_comparador16.all_53751435b7028e85b030e707046b124bb6cda23d/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_comparador16(tb) -L vunit_lib -L lib -g/tb_comparador16/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script/vunit_out/test_output/lib.tb_comparador16.all_53751435b7028e85b030e707046b124bb6cda23d/,tb path : /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/tests/tst/,use_color : true" 
+# Start time: 19:01:28 on Mar 20,2018
+# ** Warning: Design size of 18151 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Error: ng nÃ£o Ã© 0 quando a=8000
+#    Time: 80 ns  Iteration: 1  Process: /tb_comparador16/main File: /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/tests/tst/tb_comparador16.vhd
+# Break in Process main at /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/tests/tst/tb_comparador16.vhd line 51
+# Stopped at /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/tests/tst/tb_comparador16.vhd line 51
+# 
+# Stack trace result from 'tb' command
+#  /home/josefernando/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/tests/tst/tb_comparador16.vhd 51 return [address 0xf6dfb71e] Process main
+# 
+# 
+# Surrounding code from 'see' command
+#   46 :     assert(ng = '0') report "ng nÃ£o Ã© 0 quando a=0000";
+#   47 :     wait until clk'event and clk='1';
+#   48 :     a <= x"8000";
+#   49 :     wait until clk'event and clk='1';
+#   50 :     assert(zr = '0') report "zr nÃ£o Ã© 0 quando a=8000";
+# ->51 :     assert(ng = '1') report "ng nÃ£o Ã© 0 quando a=8000";
+#   52 :     a <= x"5555";
+#   53 :     wait until clk'event and clk='1';
+#   54 :     assert(zr = '0') report "zr nÃ£o Ã© 0 quando a=5555";
+#   55 :     assert(ng = '0') report "ng nÃ£o Ã© 0 quando a=8555";
+# 
+[31;1mfail[0m[m (P=0 S=0 F=1 T=1) lib.tb_comparador16.all (5.0 seconds)
+[0m
+[m==== Summary ===================================
+[0m[31;1mfail[0m[m [0m[mlib.tb_comparador16.all (5.0 seconds)
+[0m[m================================================
+[0m[32;1mpass[0m[m 0 of 1
+[0m[31;1mfail[0m[m 1 of 1
+[0m[m================================================
+[0m[mTotal time was 5.0 seconds
+[0m[mElapsed time was 5.4 seconds
+[0m[m================================================
+[0m[31;1mSome failed![0m[m
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py 
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mCompiling into lib: ../src/rtl/comparador16.vhd [0m[32;1mpassed[0m[m
+[0m[m[0m[32;1mCompile passed
+[0m
+Starting lib.tb_comparador16.all
+Output file: vunit_out/test_output/lib.tb_comparador16.all_53751435b7028e85b030e707046b124bb6cda23d/output.txt
+[32;1mpass[0m[m (P=1 S=0 F=0 T=1) lib.tb_comparador16.all (0.8 seconds)
+[0m
+[m==== Summary ===================================
+[0m[32;1mpass[0m[m [0m[mlib.tb_comparador16.all (0.8 seconds)
+[0m[m================================================
+[0m[32;1mpass[0m[m 1 of 1
+[0m[m================================================
+[0m[mTotal time was 0.8 seconds
+[0m[mElapsed time was 1.1 seconds
+[0m[m================================================
+[0m[32;1mAll passed![0m[m
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch print has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin print
+
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git commit -am "adicionando compa
+rador"
+[print 3ee3bc3] adicionando comparador
+ 3 files changed, 8 insertions(+), 2 deletions(-)
+ create mode 100644 Projetos/D-UnidadeLogicaAritmetica/src/rtl/zerador16.png
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git push origin [K[K[K[K[K[K[K[K[K[K[K[Kbrunch[K[K[K[Kanch
+  jose[m
+  master[m
+* [32mprint[m
+  zerador16[m
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git checkout -B comaprador16
+Switched to a new branch 'comaprador16'
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git checkout -B comaprador16branch[Kcommit -am "adicionando compa
+rador"
+No ramo comaprador16
+Arquivos não monitorados:
+	[31m../../../typescript[m
+
+nada adicionado ao envio mas arquivos não registrados estão presentes
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git push origin comparador16
+error: src refspec comparador16 does not match any.
+error: failed to push some refs to 'https://github.com/juanjorgegarcia/Z01-FOLKS.git'
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git push origin comparador16[K[K[K[K[K[K[K[K[K[Kmaprador16
+Username for 'https://github.com': josefmc@al.insper.edu.br
+Password for 'https://josefmc@al.insper.edu.br@github.com': 
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 189.39 KiB | 0 bytes/s, done.
+Total 10 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/6)   [Kremote: Resolving deltas:  16% (1/6)   [Kremote: Resolving deltas:  33% (2/6)   [Kremote: Resolving deltas:  50% (3/6)   [Kremote: Resolving deltas:  66% (4/6)   [Kremote: Resolving deltas:  83% (5/6)   [Kremote: Resolving deltas: 100% (6/6)   [Kremote: Resolving deltas: 100% (6/6), completed with 6 local objects.[K
+To https://github.com/juanjorgegarcia/Z01-FOLKS.git
+ * [new branch]      comaprador16 -> comaprador16
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git push origin comaprador16[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcommit -am "tirando o log"
+[comaprador16 c10f4cd] tirando o log
+ 1 file changed, 1 deletion(-)
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git commit -am "tirando o log"[2Ppush origin comaprador16
+Username for 'https://github.com': josefmc@al.insper.edu.br
+Password for 'https://josefmc@al.insper.edu.br@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 284 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/juanjorgegarcia/Z01-FOLKS.git
+   3ee3bc3..c10f4cd  comaprador16 -> comaprador16
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git push origin comaprador16commit -am "tirando o log"[2Ppush origin comaprador16parador16commit -am "adicionando compa
+rador"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pheckout -B comaprador16
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbranch[Kcommit -am "adicionando compa
+rador"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpython testeULA.py --gui
+[36m---------- Portas Logicas            [0m
+[36m---------- 04-Unidade-Logica-Aritmetica[0m
+[mRe-compile not needed
+[0m
+Starting lib.tb_comparador16.all
+Output file: vunit_out/test_output/lib.tb_comparador16.all_53751435b7028e85b030e707046b124bb6cda23d/output.txt
+^C
+[33;1mNo tests were run![0m[m
+[0m(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ python testeULA.py --guigit push origin comaprador16commit -am "tirando o log"[1Pg"[1Pg"[1Pg"[1Pg"[1Pg"[1Pg"[1Pg"[1Pg"[1Pg"[1Pg"[1Pg"[1Pg"[1P"[K[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"a"d"d" "-"A"[C[K
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git -m "mandando o fato [K[K[K[Koto do compar
+ador16"
+Unknown option: -m
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git -m "mandando o foto do compar
+ador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca-m "mandando o foto do comparador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm "mandando o foto do compara[1Pdor16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C- am "mandando o foto do comparador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C am "mandando o foto do compara[1Pdor16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-am "mandando o foto do comparador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit -am "mandando o foto do compa
+rador16"
+Unknown option: -am
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+(root) ]0;josefernando@joseLINUX: ~/Documentos/projetos git/Z01-FOLKS/Projetos/D-UnidadeLogicaAritmetica/script[01;32mjosefernando@joseLINUX[00m:[01;34m~/Documentos/projetos git/Z01-FOLKS/Projettos/D-UnidadeLogicaAritmetica/script[00m$ git -am "mandando o foto do compa
+rador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm "mandando o foto do compara[1Pdor16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cam "mandando o foto do comparador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -am "mandando o foto do comparador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc -am "mandando o foto do comparador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co -am "mandando o foto do comparador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm -am "mandando o foto do comparador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm -am "mandando o foto do comparador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci -am "mandando o foto do comparador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct -am "mandando o foto do comparador16"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[
