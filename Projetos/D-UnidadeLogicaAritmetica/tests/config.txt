@@ -1,4 +1,4 @@
-# Testes a serem executados
+﻿# Testes a serem executados
 # Descomente os módulos que deseja testar
 
 
@@ -10,4 +10,5 @@ Inc16.vhd
 #inversor16.vhd
 #zerador16.vhd
 #ALU.vhd
+
 
