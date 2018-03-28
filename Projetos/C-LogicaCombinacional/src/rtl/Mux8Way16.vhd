@@ -32,7 +32,7 @@ begin
 	elsif (sel = "101") then
 	q<=f;
 	elsif (sel = "110") then
-	q<=c;
+	q<=g;
 	else 
 	q<=h;
 	end if;
