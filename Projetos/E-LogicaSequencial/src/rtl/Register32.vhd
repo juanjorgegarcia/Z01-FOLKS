@@ -17,7 +17,7 @@ end entity;
 architecture rtl of Register32 is
 
 component Register16 is
-	port(
+	port(
 		clock:   in STD_LOGIC;
 		input:   in STD_LOGIC_VECTOR(15 downto 0);
 		load:    in STD_LOGIC;
