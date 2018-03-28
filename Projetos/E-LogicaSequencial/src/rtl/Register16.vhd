@@ -13,3 +13,25 @@ entity Register16 is
 		output: out STD_LOGIC_VECTOR(15 downto 0)
 	);
 end entity;
+
+architecture rtl of Register16 is
+
+component Register8 is
+	port(
+		clock:   in STD_LOGIC;
+		input:   in STD_LOGIC_VECTOR(7 downto 0);
+		load:    in STD_LOGIC;
+		output: out STD_LOGIC_VECTOR(7 downto 0)
+	);
+end component;
+
+signal r1out, r2out : STD_LOGIC_VECTOR(7 downto 0);
+
+begin
+
+	R8_1 : Register8 port map (clock, input(7 downto 0), load, r1out);
+	R8_2 : Register8 port map (clock, input(15 downto 8), load, r2out);
+
+	output <= r1out & r2out;
+
+end rtl;
