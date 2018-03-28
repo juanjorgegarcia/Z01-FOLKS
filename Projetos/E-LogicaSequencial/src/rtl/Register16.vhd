@@ -32,6 +32,6 @@ begin
 	R8_1 : Register8 port map (clock, input(7 downto 0), load, r1out);
 	R8_2 : Register8 port map (clock, input(15 downto 8), load, r2out);
 
-	output <= r1out & r2out;
+	output <= r2out & r1out;
 
 end rtl;
