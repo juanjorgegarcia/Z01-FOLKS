@@ -26,33 +26,26 @@ end entity;
 
 architecture arch of PC is
 
-component Inc16 is
-	port(
-		a   :  in STD_LOGIC_VECTOR(15 downto 0);
-		q   : out STD_LOGIC_VECTOR(15 downto 0)
-	);
-end component;
-
- signal tMenos, incOut : STD_LOGIC_VECTOR(15 downto 0);
-
+signal count, zr : unsigned(15 downto 0):= "0000000000000000";
 
 begin
-
-	Inc0 : Inc16 port map (tMenos,incOut);
 	
 	
-	process(clock, increment, load, reset) is
-		begin
-			if (reset = '1') then
-				output <= tMenos & '0';
-			elsif (load = '1') then 
-				output <= input; --v
+	process(clock, reset, increment, load) is
+	begin
+		if (reset = '1') then
+			count <= zr;
+		elsif (rising_edge(clock)) then
+			if (load = '1') then 
+				count <= unsigned(input);
 			elsif (increment = '1') then
-				output <= incOut;
+				count <= count + "0000000000000001";
 			else
-				output <= output;
+				count <= count;
 			end if;
-			
+		end if;
+		
+		
 	end process;
-
+	output <=  STD_LOGIC_VECTOR(count);
 end architecture;
