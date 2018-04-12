@@ -1,0 +1,6 @@
+
+
+- Assembler
+    10/04
+    - possibilitei escolher a origem do dado no jump
+       exe : jge %S
