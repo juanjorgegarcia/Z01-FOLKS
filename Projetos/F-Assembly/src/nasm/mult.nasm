@@ -1,7 +1,228 @@
-; Arquivo: Abs.nasm
-; Curso: Elementos de Sistemas
-; Criado por: Luciano Soares
-; Data: 27/03/2017
+leaw $0, %A
+movw (%A),%D
+leaw $1, %A
+movw (%A),%S
+decw %S
+leaw $0,%A
+addw (%A),%D,%D
+decw %S
+leaw $3,%A
+movw %D,(%A)
+leaw $4,%A
+jg %S
+nop
 
-; Multiplica o valor de RAM[1] com RAM[0] salvando em RAM[3]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ; S = pixel
+leaw $1, %A
+addw (%A), %S, %S  ; soma 20 em S
+leaw $0, %A
+movw %S, (%A)      ; 0 = soma - S = soma
+leaw $0, %A
+movw %A, %D
+notw %D
+movw %S, %A
+movw %D, (%A)
+leaw $2, %A
+movw (%A), %D
+leaw $loop, %A
+jg %D
+nop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
