@@ -126,6 +126,23 @@ BEGIN
      );
 
 
+  ROM : ROM32K port map(
+    clock => CLK_SLOW,
+	address => pcout,
+	q => instruction
+  );
+  cpu : CPU port map(
+	clock => CLK_SLOW,
+	inM => OUTPUT,
+	addressM => ADDRESS,
+	writeM => LOAD,
+	outM => INPUT,
+	pcout => address,
+	instruction => q,
+	reset => RESET_N
+  );
+  
+
   -- Resets
   RST_CPU <= RESET or (not LCD_INIT_OK) or (not PLL_LOCKED); -- REINICIA CPU
 	RST_MEM <= RESET or (not PLL_LOCKED);                      -- REINICIA MemoryIO
