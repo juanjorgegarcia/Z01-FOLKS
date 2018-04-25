@@ -114,7 +114,7 @@ REG16 : Register16 port map (clock=>CLK_SLOW,input=>INPUT ,load=> j1,output=>out
 
 
 Scr : Screen port map (INPUT=>INPUT,
-	LOAD=>j1,
+	LOAD=>j2,
 	ADDRESS=>ADDRESS(13 downto 0),
 	CLK_FAST=>CLK_FAST,
 	CLK_SLOW=>CLK_SLOW,
