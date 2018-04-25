@@ -130,7 +130,7 @@ Scr : Screen port map (INPUT=>INPUT,
 
 s1 <= "00" when (ADDRESS<="011111111111111") else
 		"01" when (ADDRESS<="101001010111111") else
-		"10" when (ADDRESS<="101001011000000") else
+		"10" when (ADDRESS = "101001011000000") else
 		"11";
 s2 <= '1' when(ADDRESS<="011111111111111") else
 		'0';
