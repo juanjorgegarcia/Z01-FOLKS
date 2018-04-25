@@ -125,7 +125,7 @@ BEGIN
     outclk_0 => CLK_FAST,
     outclk_1 => CLK_SLOW,
     locked   => PLL_LOCKED
-     );
+     ); 
 
 
   -- Resets
