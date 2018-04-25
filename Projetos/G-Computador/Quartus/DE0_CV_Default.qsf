@@ -41,7 +41,7 @@
 # Project-Wide Assignments
 # ========================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13
-set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "MON MAY  5 11:54:18 2014"
 set_global_assignment -name FLOW_ENABLE_RTL_VIEWER ON
 set_global_assignment -name SMART_RECOMPILE ON
@@ -542,7 +542,6 @@ set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/Screen/Screen.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/Screen/ILI9341.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/ROM/ROM32K.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/RAM/RAM16K.vhd
-set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/PLL/PLL.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/MemoryIO.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/CPU.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/ControlUnit.vhd

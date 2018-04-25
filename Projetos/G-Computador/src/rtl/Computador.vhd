@@ -113,9 +113,12 @@ ARCHITECTURE logic OF Computador IS
   SIGNAL OUTPUT_RAM   : STD_LOGIC_VECTOR(15 downto 0);
   SIGNAL INSTRUCTION  : STD_LOGIC_VECTOR(15 downto 0);
   SIGNAL PC			      : STD_LOGIC_VECTOR(14 downto 0);
-
-
+  SIGNAL OUTABC : STD_LOGIC;
+  SIGNAL OUTAB : STD_LOGIC;
+  
 BEGIN
+	OUTABC <= LCD_INIT_OK OR RESET_N OR PLL_LOCKED;
+	OUTAB <= PLL_LOCKED OR RESET_N;
 
 	PLL_inst : PLL PORT map (
     refclk   => CLOCK_50,
@@ -124,6 +127,39 @@ BEGIN
     outclk_1 => CLK_SLOW,
     locked   => PLL_LOCKED
      );
+  ROM : ROM32K port map(
+    clock => CLOCK_50,
+	address => PC,
+	q => INSTRUCTION
+  );
+  MAIN_CPU : CPU port map(
+	clock => CLK_SLOW,
+	inM => OUTPUT_RAM,
+	addressM => ADDRESS,
+	writeM => LOAD,
+	outM => INPUT,
+	pcout => PC,
+	instruction => INSTRUCTION,
+	reset => OUTABC
+  );
+  MEMO : MemoryIO port map(
+	CLK_SLOW => CLK_SLOW,
+	CLK_FAST => CLK_FAST,
+	RST => OUTAB,
+	ADDRESS => ADDRESS,
+	INPUT => INPUT,
+	LOAD => LOAD,
+	OUTPUT => OUTPUT_RAM,
+	LCD_CS_N => LCD_CS_N,
+	LCD_D => LCD_D,
+	LCD_RD_N => LCD_RD_N,
+	LCD_RESET_N => LCD_RESET_N,
+	LCD_RS => LCD_RS,
+	LCD_WR_N => LCD_WR_N,
+	LCD_INIT_OK => LCD_INIT_OK,
+	SW => SW,
+	LED => LEDR
+  );
 
 
   -- Resets
