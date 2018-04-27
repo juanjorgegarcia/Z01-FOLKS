@@ -1,9 +1,17 @@
 // memory data file (do not edit the following line - required for mem load use)
+<<<<<<< HEAD
 // instance=/computador_tb/c1/RAM/altsyncram_component/MEMORY/m_mem_data_a
 // format=mti addressradix=d dataradix=b version=1.0 wordsperline=1
     0: 0000000000000101
     1: 0000000000000110
     2: 0000000000000111
+=======
+// instance=/computador_tb/c1/MEMORY_MAPED/RAM/altsyncram_component/MEMORY/m_mem_data_a
+// format=mti addressradix=d dataradix=b version=1.0 wordsperline=1
+    0: 0000000000000001
+    1: 0000000000000101
+    2: 0000000000000010
+>>>>>>> upstream/master
     3: 0000000000000000
     4: 0000000000000000
     5: 0000000000000000
@@ -16385,6 +16393,7 @@
 16381: 0000000000000000
 16382: 0000000000000000
 16383: 0000000000000000
+<<<<<<< HEAD
 16384: 0000000000000000
 16385: 0000000000000000
 16386: 0000000000000000
@@ -32769,3 +32778,5 @@
 32765: 0000000000000000
 32766: 0000000000000000
 32767: 0000000000000000
+=======
+>>>>>>> upstream/master

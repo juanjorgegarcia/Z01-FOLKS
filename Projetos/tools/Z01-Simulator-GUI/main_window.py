@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
+<<<<<<< HEAD
 # Form implementation generated from reading ui file 'main_window.ui'
+=======
+# Form implementation generated from reading ui file 'sim_window.ui'
+>>>>>>> upstream/master
 #
 # Created by: PyQt5 UI code generator 5.10
 #
@@ -26,7 +30,11 @@ class Ui_MainWindow(object):
         self.romView = QtWidgets.QTableView(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
+<<<<<<< HEAD
         sizePolicy.setVerticalStretch(0)
+=======
+        sizePolicy.setVerticalStretch(3)
+>>>>>>> upstream/master
         sizePolicy.setHeightForWidth(self.romView.sizePolicy().hasHeightForWidth())
         self.romView.setSizePolicy(sizePolicy)
         self.romView.setObjectName("romView")
@@ -37,7 +45,11 @@ class Ui_MainWindow(object):
         self.ramView = QtWidgets.QTableView(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
+<<<<<<< HEAD
         sizePolicy.setVerticalStretch(0)
+=======
+        sizePolicy.setVerticalStretch(5)
+>>>>>>> upstream/master
         sizePolicy.setHeightForWidth(self.ramView.sizePolicy().hasHeightForWidth())
         self.ramView.setSizePolicy(sizePolicy)
         self.ramView.setObjectName("ramView")
@@ -97,6 +109,7 @@ class Ui_MainWindow(object):
         spacerItem = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.formLayout.setItem(1, QtWidgets.QFormLayout.LabelRole, spacerItem)
         self.verticalLayout_Reg.addLayout(self.formLayout)
+<<<<<<< HEAD
         self.label_ALU = QtWidgets.QLabel(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
@@ -110,6 +123,17 @@ class Ui_MainWindow(object):
         self.label_ALU.setAlignment(QtCore.Qt.AlignCenter)
         self.label_ALU.setObjectName("label_ALU")
         self.verticalLayout_Reg.addWidget(self.label_ALU)
+=======
+        self.but_ALU = QtWidgets.QPushButton(self.centralwidget)
+        self.but_ALU.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("theme/alu.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.but_ALU.setIcon(icon)
+        self.but_ALU.setIconSize(QtCore.QSize(200, 200))
+        self.but_ALU.setFlat(True)
+        self.but_ALU.setObjectName("but_ALU")
+        self.verticalLayout_Reg.addWidget(self.but_ALU)
+>>>>>>> upstream/master
         self.horizontalLayout.addLayout(self.verticalLayout_Reg)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
@@ -121,12 +145,17 @@ class Ui_MainWindow(object):
         self.menuAjuda.setObjectName("menuAjuda")
         self.menuVisualizar = QtWidgets.QMenu(self.menubar)
         self.menuVisualizar.setObjectName("menuVisualizar")
+<<<<<<< HEAD
         self.menuRAM = QtWidgets.QMenu(self.menuVisualizar)
         self.menuRAM.setObjectName("menuRAM")
         self.menuROM = QtWidgets.QMenu(self.menuVisualizar)
         self.menuROM.setObjectName("menuROM")
         self.menuRegistradores = QtWidgets.QMenu(self.menuVisualizar)
         self.menuRegistradores.setObjectName("menuRegistradores")
+=======
+        self.menuROM = QtWidgets.QMenu(self.menuVisualizar)
+        self.menuROM.setObjectName("menuROM")
+>>>>>>> upstream/master
         self.menuArquivo = QtWidgets.QMenu(self.menubar)
         self.menuArquivo.setToolTipsVisible(True)
         self.menuArquivo.setObjectName("menuArquivo")
@@ -143,6 +172,7 @@ class Ui_MainWindow(object):
         MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
         self.actionSobre = QtWidgets.QAction(MainWindow)
         self.actionSobre.setObjectName("actionSobre")
+<<<<<<< HEAD
         self.actionRAMBinario = QtWidgets.QAction(MainWindow)
         self.actionRAMBinario.setCheckable(True)
         self.actionRAMBinario.setObjectName("actionRAMBinario")
@@ -229,6 +259,75 @@ class Ui_MainWindow(object):
         self.menuVisualizar.addAction(self.menuROM.menuAction())
         self.menuVisualizar.addAction(self.menuRAM.menuAction())
         self.menuVisualizar.addAction(self.menuRegistradores.menuAction())
+=======
+        self.actionAssembly = QtWidgets.QAction(MainWindow)
+        self.actionAssembly.setObjectName("actionAssembly")
+        self.actionROMBinario = QtWidgets.QAction(MainWindow)
+        self.actionROMBinario.setCheckable(True)
+        self.actionROMBinario.setObjectName("actionROMBinario")
+        self.actionROMAssembly = QtWidgets.QAction(MainWindow)
+        self.actionROMAssembly.setCheckable(True)
+        self.actionROMAssembly.setObjectName("actionROMAssembly")
+        self.actionSair = QtWidgets.QAction(MainWindow)
+        self.actionSair.setObjectName("actionSair")
+        self.actionAbrir = QtWidgets.QAction(MainWindow)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("theme/document-open.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionAbrir.setIcon(icon1)
+        self.actionAbrir.setObjectName("actionAbrir")
+        self.actionNovo = QtWidgets.QAction(MainWindow)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("theme/document-new.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionNovo.setIcon(icon2)
+        self.actionNovo.setObjectName("actionNovo")
+        self.actionProximo = QtWidgets.QAction(MainWindow)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("theme/go-next.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionProximo.setIcon(icon3)
+        self.actionProximo.setObjectName("actionProximo")
+        self.actionExecutarFim = QtWidgets.QAction(MainWindow)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap("theme/go-jump.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("theme/go-jump.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.actionExecutarFim.setIcon(icon4)
+        self.actionExecutarFim.setObjectName("actionExecutarFim")
+        self.actionParar = QtWidgets.QAction(MainWindow)
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap("theme/process-stop.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionParar.setIcon(icon5)
+        self.actionParar.setObjectName("actionParar")
+        self.actionVoltarInicio = QtWidgets.QAction(MainWindow)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap("theme/go-first.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionVoltarInicio.setIcon(icon6)
+        self.actionVoltarInicio.setObjectName("actionVoltarInicio")
+        self.actionSalvar_ROM = QtWidgets.QAction(MainWindow)
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap("theme/document-save.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.actionSalvar_ROM.setIcon(icon7)
+        self.actionSalvar_ROM.setObjectName("actionSalvar_ROM")
+        self.actionConfiguracoes = QtWidgets.QAction(MainWindow)
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap("theme/preferences-system.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionConfiguracoes.setIcon(icon8)
+        self.actionConfiguracoes.setObjectName("actionConfiguracoes")
+        self.actionEraseRAM = QtWidgets.QAction(MainWindow)
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap("theme/eraser.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionEraseRAM.setIcon(icon9)
+        self.actionEraseRAM.setObjectName("actionEraseRAM")
+        self.actionIrFim = QtWidgets.QAction(MainWindow)
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap("theme/go-last.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionIrFim.setIcon(icon10)
+        self.actionIrFim.setObjectName("actionIrFim")
+        self.menuAjuda.addAction(self.actionSobre)
+        self.menuROM.addSeparator()
+        self.menuROM.addSeparator()
+        self.menuROM.addAction(self.actionROMBinario)
+        self.menuROM.addAction(self.actionROMAssembly)
+        self.menuVisualizar.addAction(self.menuROM.menuAction())
+>>>>>>> upstream/master
         self.menuArquivo.addAction(self.actionNovo)
         self.menuArquivo.addAction(self.actionAbrir)
         self.menuArquivo.addSeparator()
@@ -253,6 +352,10 @@ class Ui_MainWindow(object):
         self.toolBar.addAction(self.actionExecutarFim)
         self.toolBar.addAction(self.actionParar)
         self.toolBar.addAction(self.actionVoltarInicio)
+<<<<<<< HEAD
+=======
+        self.toolBar.addAction(self.actionIrFim)
+>>>>>>> upstream/master
         self.toolBar.addSeparator()
         self.toolBar.addAction(self.actionConfiguracoes)
 
@@ -269,6 +372,7 @@ class Ui_MainWindow(object):
         self.label_S.setText(_translate("MainWindow", "S"))
         self.label_inM.setText(_translate("MainWindow", "inM"))
         self.label_outM.setText(_translate("MainWindow", "outM"))
+<<<<<<< HEAD
         self.menuAjuda.setTitle(_translate("MainWindow", "Ajuda"))
         self.menuVisualizar.setTitle(_translate("MainWindow", "Visualizar"))
         self.menuRAM.setTitle(_translate("MainWindow", "RAM"))
@@ -305,4 +409,36 @@ class Ui_MainWindow(object):
         self.actionConfiguracoes.setToolTip(_translate("MainWindow", "Configurações"))
         self.actionEraseRAM.setText(_translate("MainWindow", "EraseRAM"))
         self.actionEraseRAM.setToolTip(_translate("MainWindow", "Erase RAM"))
+=======
+        self.menuAjuda.setTitle(_translate("MainWindow", "A&juda"))
+        self.menuVisualizar.setTitle(_translate("MainWindow", "Vis&ualizar"))
+        self.menuROM.setTitle(_translate("MainWindow", "&ROM"))
+        self.menuArquivo.setTitle(_translate("MainWindow", "Ar&quivo"))
+        self.menuAcao.setTitle(_translate("MainWindow", "A&ção"))
+        self.menuOpcoes.setTitle(_translate("MainWindow", "Opç&ões"))
+        self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
+        self.actionSobre.setText(_translate("MainWindow", "&Sobre"))
+        self.actionAssembly.setText(_translate("MainWindow", "Assembly"))
+        self.actionROMBinario.setText(_translate("MainWindow", "&Binário"))
+        self.actionROMAssembly.setText(_translate("MainWindow", "&Assembly"))
+        self.actionSair.setText(_translate("MainWindow", "Sa&ir"))
+        self.actionAbrir.setText(_translate("MainWindow", "&Abrir"))
+        self.actionNovo.setText(_translate("MainWindow", "&Novo"))
+        self.actionNovo.setToolTip(_translate("MainWindow", "Novo Arquivo"))
+        self.actionProximo.setText(_translate("MainWindow", "&Proximo"))
+        self.actionProximo.setToolTip(_translate("MainWindow", "Próxima Instrução"))
+        self.actionExecutarFim.setText(_translate("MainWindow", "&Executar até o Fim"))
+        self.actionExecutarFim.setToolTip(_translate("MainWindow", "Executar até o final"))
+        self.actionParar.setText(_translate("MainWindow", "Pa&rar"))
+        self.actionParar.setToolTip(_translate("MainWindow", "Parar execução"))
+        self.actionVoltarInicio.setText(_translate("MainWindow", "&Voltar ao Início"))
+        self.actionVoltarInicio.setToolTip(_translate("MainWindow", "Voltar ao Início"))
+        self.actionSalvar_ROM.setText(_translate("MainWindow", "&Salvar ROM"))
+        self.actionSalvar_ROM.setToolTip(_translate("MainWindow", "Salvar ROM"))
+        self.actionConfiguracoes.setText(_translate("MainWindow", "&Configurações"))
+        self.actionConfiguracoes.setToolTip(_translate("MainWindow", "Configurações"))
+        self.actionEraseRAM.setText(_translate("MainWindow", "EraseRAM"))
+        self.actionEraseRAM.setToolTip(_translate("MainWindow", "Erase RAM"))
+        self.actionIrFim.setText(_translate("MainWindow", "Ir para o fim"))
+>>>>>>> upstream/master
 
