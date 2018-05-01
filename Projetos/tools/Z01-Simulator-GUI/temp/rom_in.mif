@@ -5,18 +5,12 @@
 -- to be used on ALTERA FPGAs
 
 WIDTH=16;
-<<<<<<< HEAD
-DEPTH=0;
-=======
 DEPTH=22;
->>>>>>> upstream/master
 
 ADDRESS_RADIX=UNS;
 DATA_RADIX=BIN;
 
 CONTENT BEGIN
-<<<<<<< HEAD
-=======
        0 : 0000000000000000;
        1 : 1101010100001000;
        2 : 0000000000000010;
@@ -39,5 +33,4 @@ CONTENT BEGIN
       19 : 0000000000010011;
       20 : 1001010100000111;
       21 : 1001010100000000;
->>>>>>> upstream/master
 END;

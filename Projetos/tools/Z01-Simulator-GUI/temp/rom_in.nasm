@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 leaw $R0,%A
 movw $0,(%A)
 leaw $R2,%A
@@ -131,7 +129,6 @@ nop
 
 
 
->>>>>>> upstream/master
 
 
 

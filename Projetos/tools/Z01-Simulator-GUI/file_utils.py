@@ -3,12 +3,8 @@
 # Dez/2017
 # Disciplina Elementos de Sistemas
 
-<<<<<<< HEAD
-import os, shutil, codecs
-=======
 import shutil
 from PyQt5.QtGui import QStandardItem
->>>>>>> upstream/master
 
 def stream_to_file(fsrc, filename):
    fsrc.seek(0, 0)
@@ -18,10 +14,6 @@ def stream_to_file(fsrc, filename):
    fsrc.seek(0, 0)
    return filename
 
-<<<<<<< HEAD
-=======
-
->>>>>>> upstream/master
 def file_to_stream(filename, fdest):
    fdest.seek(0, 0)
    fsrc = open(filename, "r")
@@ -29,18 +21,12 @@ def file_to_stream(filename, fdest):
    fsrc.close()
    return fdest
 
-<<<<<<< HEAD
-=======
-
->>>>>>> upstream/master
 def create_empty_rom(file_dest, size=1024):
    dest = open(file_dest, "w")
    for i in range(0, size):
         dest.write("0000000000000000\n")
    dest.close()
    return file_dest
-<<<<<<< HEAD
-=======
 
 
 def copy_file_to_model(file_in, model, preprocessor=None):
@@ -80,4 +66,3 @@ def copy_file_to_file(f1, f2, preprocessor=None):
     f2.seek(0, 0)
     f1.seek(0, 0)
     return f2
->>>>>>> upstream/master
