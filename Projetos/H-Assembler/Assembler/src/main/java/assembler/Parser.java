@@ -5,12 +5,18 @@
 
 package assembler;
 
+
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.io.File;
 /**
  * Encapsula o código de leitura. Carrega as instruções na linguagem assembly,
  * analisa, e oferece acesso as partes da instrução  (campos e símbolos).
  * Além disso, remove todos os espaços em branco e comentários.
  */
 public class Parser {
+    Scanner stdin;
+    String currentCommand;
 
     /** Enumerator para os tipos de comandos do Assembler. */
     public enum CommandType {
@@ -25,6 +31,15 @@ public class Parser {
      */
     public Parser(String file) {
 
+
+        try{
+            File data = new File(file);
+            this.stdin = new Scanner(data);
+        } catch (FileNotFoundException e){
+            System.out.println("File not found - Error");
+            e.printStackTrace();
+        }
+
     }
 
     /**
@@ -34,7 +49,22 @@ public class Parser {
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
     public Boolean advance() {
-    	return null;
+    	if (stdin.hasNextLine()){
+    	    String tmp = stdin.nextLine();
+    	    tmp = tmp.trim();
+//    	    System.out.println(tmp.charAt(0));
+    	    if (tmp.charAt(0) != ';'){
+                tmp.replace("\t","");
+                tmp =tmp.replaceAll(" +", " ");
+    	        System.out.println(tmp);
+                this.currentCommand = tmp;
+            }
+
+    	    return true;
+        }
+        else {
+    	    return false;
+        }
     }
 
     /**
@@ -42,7 +72,8 @@ public class Parser {
      * @return a instrução atual para ser analilisada
      */
     public String command() {
-    	return null;
+        System.out.println(this.currentCommand);
+    	return this.currentCommand;
     }
 
     /**
@@ -54,7 +85,17 @@ public class Parser {
      * @return o tipo da instrução.
      */
     public CommandType commandType(String command) {
-    	return null;
+        if(command.endsWith(":")){
+            return CommandType.L_COMMAND;
+        }
+        else if (command.startsWith("leaw")){
+            return CommandType.A_COMMAND;
+
+        }
+        else {
+            return CommandType.C_COMMAND;
+        }
+
     }
 
     /**
@@ -64,7 +105,26 @@ public class Parser {
      * @return somente o símbolo ou o valor número da instrução.
      */
     public String symbol(String command) {
-    	return null;
+        String simb = "";
+        Integer inde = 0;
+        if(commandType(command) == CommandType.A_COMMAND){
+
+            for (int i = 0; i <command.length() ; i++) {
+                if(command.charAt(i)=='$'){
+                    inde = i+1;
+                }
+            }
+            String newcom= command.substring(inde,command.length());
+            for (int i = 0; i <newcom.length() ; i++) {
+
+                if(newcom.charAt(i)==' ' || newcom.charAt(i) == ','){
+                    break;
+                }
+                simb+=newcom.charAt(i);
+
+            }
+        }
+    	return simb;
     }
 
     /**
@@ -74,7 +134,11 @@ public class Parser {
      * @return o símbolo da instrução (sem os dois pontos).
      */
     public String label(String command) {
-    	return null;
+        String simb = "";
+        if (commandType(command) == CommandType.L_COMMAND) {
+            simb = command.substring(0,command.length()-1);
+        }
+    	return simb;
     }
 
     /**
@@ -84,7 +148,10 @@ public class Parser {
      * @return um vetor de string contento os tokens da instrução (as partes do comando).
      */
     public String[] instruction(String command) {
-    	return null;
+        String[] instructions = new String[3];
+        command = command.replace(',',' ');
+        instructions=command.split(" ");
+        return instructions;
     }
 
 }
