@@ -98,6 +98,14 @@ public class Code {
     		binCalc.setCharAt(7, '1');
     	}
     	
+    	if ((mnemnonic[0].charAt(0) == 'j')){
+    		if (mnemnonic[1] == "%S"){
+    			binCalc.setCharAt(1, '1');
+    		}
+    		binCalc.setCharAt(4, '1');
+    		binCalc.setCharAt(5, '1');
+    	}
+    	
     	if ((mnemnonic[0] == "decw")){
     		binCalc.setCharAt(6, '1');
     		if (mnemnonic[1] == "%A" | mnemnonic[1] == "(%A)"){
@@ -138,8 +146,11 @@ public class Code {
     		binCalc.setCharAt(7, '1');
     	}
     	
-    	
-    	
+    	if ((mnemnonic[0] == "nop")){
+    		binCalc.setCharAt(2, '1');
+    		binCalc.setCharAt(4, '1');
+    		binCalc.setCharAt(6, '1');
+    	}
     	
     	if ((mnemnonic[0] == "movw")){
     		binCalc.setCharAt(5, '0');
@@ -155,11 +166,17 @@ public class Code {
     	
     	if ((mnemnonic[0] == "subw")){
     		binCalc.setCharAt(6, '1');
-			binCalc.setCharAt(7, '1');
+			binCalc.setCharAt(7, '1'); //caso normal
 			if (mnemnonic[1] == "%A"| mnemnonic[1] == "(%A)"){
 				binCalc.setCharAt(5, '1');
 			} else{
 				binCalc.setCharAt(3, '1');
+			}
+			if(mnemnonic[2] == "$1") {
+				binCalc.setCharAt(2, '1');
+				binCalc.setCharAt(3, '1');
+				binCalc.setCharAt(5, '0');
+				binCalc.setCharAt(7, '0');
 			}
     	}
     	
@@ -178,7 +195,7 @@ public class Code {
     	}
     	
     	//System.out.println(mnemnonic[0]);
-    	//System.out.println(length);
+    	//System.out.println(mnemnonic[0].substring(0,1));
     	//System.out.println(binCalc);
     	
     	return binCalc.toString();
