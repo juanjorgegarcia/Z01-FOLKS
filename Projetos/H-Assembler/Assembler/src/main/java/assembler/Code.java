@@ -5,7 +5,6 @@
 
 package assembler;
 
-import java.math.BigInteger;
 
 /**
  * Traduz mnemônicos da linguagem assembly para códigos binários da arquitetura Z0.
@@ -68,8 +67,14 @@ public class Code {
         	} else if(mnemnonic[1] == "%S"){
         		binCalc.setCharAt(0, '0');
         		binCalc.setCharAt(1, '1');
-        
         	}
+    	} else if(mnemnonic[0] == "movw"){
+    		if ((mnemnonic[1] == "%A")|(mnemnonic[1] == "%D")){
+    			binCalc.setCharAt(0, '0');
+    		} else if(mnemnonic[1] == "%S"){
+    			binCalc.setCharAt(0, '0');
+    			binCalc.setCharAt(1, '1');
+    		}
     	} else if(length >= 2) {
     		if ((mnemnonic[1] == "%A" & mnemnonic[2] == "%D")|(mnemnonic[2] == "%A" & mnemnonic[1] == "%D")){
     			binCalc.setCharAt(0, '0');
@@ -194,9 +199,9 @@ public class Code {
     		binCalc.setCharAt(6, '1');
     	}
     	
-    	//System.out.println(mnemnonic[0]);
+    	System.out.println(mnemnonic[0]);
     	//System.out.println(mnemnonic[0].substring(0,1));
-    	//System.out.println(binCalc);
+    	System.out.println(binCalc);
     	
     	return binCalc.toString();
     }
