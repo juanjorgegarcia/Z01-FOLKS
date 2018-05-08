@@ -62,6 +62,7 @@ public class Assemble {
     			String symb = parser.symbol(parser.command());
     			
     			if((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){ //Root checking if number
+
     				if (!table.contains(symb)){
     					table.addEntry(symb, currentRam );
     					currentRam ++;
@@ -103,7 +104,6 @@ public class Assemble {
         			machineCode = "0" + code1.toBinary(symb);	
         		}
         		outHACK.println(machineCode);
-
         		
         	} else if(parser.commandType(parser.command()) == CommandType.C_COMMAND) {
 			
