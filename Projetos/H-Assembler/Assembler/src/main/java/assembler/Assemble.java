@@ -61,7 +61,8 @@ public class Assemble {
     		else if(parser.commandType(parser.command()) == CommandType.A_COMMAND ){
     			String symb = parser.symbol(parser.command());
     			
-    			if((int) symb.charAt(0) < 48 && (int) symb.charAt(0) > 57){ //Root checking if number
+    			if((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){ //Root checking if number
+
     				if (!table.contains(symb)){
     					table.addEntry(symb, currentRam );
     					currentRam ++;
@@ -103,9 +104,13 @@ public class Assemble {
         			machineCode = "0" + code1.toBinary(symb);	
         		}
         		outHACK.println(machineCode);
-
         		
         	} else if(parser.commandType(parser.command()) == CommandType.C_COMMAND) {
+			
+			for (int i=0; i <mnemnonic.length; i++){
+				System.out.println((mnemnonic)[i]);
+			}
+			System.out.println(code1.dest(mnemnonic));
         		machineCode = "1"+ code1.comp(mnemnonic)+code1.dest(mnemnonic)+code1.jump(mnemnonic);
         		outHACK.println(machineCode);
 
@@ -138,3 +143,4 @@ public class Assemble {
     }
 
 }
+

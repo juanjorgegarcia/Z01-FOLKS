@@ -7,7 +7,7 @@ package assembler;
 
 
 /**
- * Traduz mnemônicos da linguagem assembly para códigos binários da arquitetura Z0.
+ * Traduz mnemÃ´nicos da linguagem assembly para cÃ³digos binÃ¡rios da arquitetura Z0.
  */
 
 
@@ -17,9 +17,9 @@ public class Code {
 	
 	
     /**
-     * Retorna o código binário do(s) registrador(es) que vão receber o valor da instrução.
-     * @param  mnemnonic vetor de mnemônicos "instrução" a ser analisada.
-     * @return Opcode (String de 4 bits) com código em linguagem de máquina para a instrução.
+     * Retorna o cÃ³digo binÃ¡rio do(s) registrador(es) que vÃ£o receber o valor da instruÃ§Ã£o.
+     * @param  mnemnonic vetor de mnemÃ´nicos "instruÃ§Ã£o" a ser analisada.
+     * @return Opcode (String de 4 bits) com cÃ³digo em linguagem de mÃ¡quina para a instruÃ§Ã£o.
      */
     public static String dest(String[] mnemnonic) {
     	
@@ -50,9 +50,9 @@ public class Code {
     }
     
     /**
-     * Retorna o código binário do mnemônico para realizar uma operação de cálculo.
-     * @param  mnemnonic vetor de mnemônicos "instrução" a ser analisada.
-     * @return Opcode (String de 8 bits) com código em linguagem de máquina para a instrução.
+     * Retorna o cÃ³digo binÃ¡rio do mnemÃ´nico para realizar uma operaÃ§Ã£o de cÃ¡lculo.
+     * @param  mnemnonic vetor de mnemÃ´nicos "instruÃ§Ã£o" a ser analisada.
+     * @return Opcode (String de 8 bits) com cÃ³digo em linguagem de mÃ¡quina para a instruÃ§Ã£o.
      */
     public static String comp(String[] mnemnonic) {
     	StringBuilder binCalc = new StringBuilder("10000000");
@@ -84,6 +84,17 @@ public class Code {
     		} else if ((mnemnonic[1] == "(%A)" & mnemnonic[2] == "%S")|(mnemnonic[2] == "(%A)" & mnemnonic[1] == "%S")){
     			binCalc.setCharAt(1, '1');
     		}
+    	} else if(mnemnonic.length == 1){
+    		if (mnemnonic[0] == "nop"){
+    			binCalc.setCharAt(2, '1');
+    			binCalc.setCharAt(4, '1');
+    			binCalc.setCharAt(6, '1');
+    		} else {
+    			binCalc.setCharAt(0, '0');
+        		binCalc.setCharAt(2, '1');
+        		binCalc.setCharAt(3, '1');
+    		}
+    		
     	}
     	
     	
@@ -103,7 +114,7 @@ public class Code {
     		binCalc.setCharAt(7, '1');
     	}
     	
-    	if ((mnemnonic[0].charAt(0) == 'j')){
+    	if ((mnemnonic[0].charAt(0) == 'j') & (length > 0) ){
     		if (mnemnonic[1] == "%S"){
     			binCalc.setCharAt(1, '1');
     		}
@@ -207,9 +218,9 @@ public class Code {
     }
 
     /**
-     * Retorna o código binário do mnemônico para realizar uma operação de jump (salto).
-     * @param  mnemnonic vetor de mnemônicos "instrução" a ser analisada.
-     * @return Opcode (String de 3 bits) com código em linguagem de máquina para a instrução.
+     * Retorna o cÃ³digo binÃ¡rio do mnemÃ´nico para realizar uma operaÃ§Ã£o de jump (salto).
+     * @param  mnemnonic vetor de mnemÃ´nicos "instruÃ§Ã£o" a ser analisada.
+     * @return Opcode (String de 3 bits) com cÃ³digo em linguagem de mÃ¡quina para a instruÃ§Ã£o.
      */
     public static String jump(String[] mnemnonic) {
     	int length = mnemnonic.length;
@@ -235,9 +246,9 @@ public class Code {
     }
 
     /**
-     * Retorna o código binário de um valor decimal armazenado numa String.
-     * @param  symbol valor numérico decimal armazenado em uma String.
-     * @return Valor em binário (String de 15 bits) representado com 0s e 1s.
+     * Retorna o cÃ³digo binÃ¡rio de um valor decimal armazenado numa String.
+     * @param  symbol valor numÃ©rico decimal armazenado em uma String.
+     * @return Valor em binÃ¡rio (String de 15 bits) representado com 0s e 1s.
      */
     public static String toBinary(String symbol) {
     	return String.format("%15s", Integer.toBinaryString(Integer.parseInt(symbol))).replace(' ', '0');
@@ -252,3 +263,4 @@ public class Code {
     	return null;
     }
 }
+
