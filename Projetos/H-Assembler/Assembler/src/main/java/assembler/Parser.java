@@ -49,23 +49,31 @@ public class Parser {
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
     public Boolean advance() {
-    	if (stdin.hasNextLine()){
-    	    String tmp = stdin.nextLine();
-    	    tmp = tmp.trim();
-//    	    System.out.println(tmp.charAt(0));
-    	    if (tmp.charAt(0) != ';'){
-                tmp.replace("\t","");
-                tmp =tmp.replaceAll(" +", " ");
-    	        System.out.println(tmp);
-                this.currentCommand = tmp;
+        while(stdin.hasNextLine()){
+            String tmp = stdin.nextLine();
+
+            tmp = tmp.trim();
+
+            if (!tmp.isEmpty() && tmp.charAt(0) != ';'  ) {
+                tmp.replace("\t", "");
+                tmp = tmp.replaceAll(" +", " ");
+                int ind = tmp.length();
+                for (int i = 0; i <tmp.length() ; i++) {
+                    if (tmp.charAt(i) == ';'){
+                        ind = i-1;
+
+                    }
+
+                }
+//                System.out.println(tmp);
+                this.currentCommand = tmp.substring(0,(ind));
+                return true;
             }
 
-    	    return true;
         }
-        else {
-    	    return false;
-        }
+        return false;
     }
+
 
     /**
      * Retorna o comando "intrução" atual (sem o avanço)
@@ -73,7 +81,7 @@ public class Parser {
      */
     public String command() {
         System.out.println(this.currentCommand);
-    	return this.currentCommand;
+        return this.currentCommand;
     }
 
     /**
@@ -124,7 +132,7 @@ public class Parser {
 
             }
         }
-    	return simb;
+        return simb;
     }
 
     /**
@@ -138,7 +146,7 @@ public class Parser {
         if (commandType(command) == CommandType.L_COMMAND) {
             simb = command.substring(0,command.length()-1);
         }
-    	return simb;
+        return simb;
     }
 
     /**
