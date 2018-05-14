@@ -11,6 +11,7 @@ package assembler;
 
 import java.io.*;
 import java.util.*;
+import assembler.Parser.CommandType;
 
 /**
  * Faz a geração do código gerenciando os demais módulos
@@ -34,7 +35,8 @@ public class Assemble {
         outHACK    = new PrintWriter(new FileWriter(hackFile));  // Cria saída do print para
                                                                  // o arquivo hackfile
         table      = new SymbolTable();                          // Cria e inicializa a tabela de simbolos
-
+        
+       
     }
 
     /**
@@ -45,8 +47,33 @@ public class Assemble {
      * Dependencia : Parser, SymbolTable
      */
     public void fillSymbolTable() throws FileNotFoundException, IOException {
-    }
+    	Parser parser = new Parser(inputFile);
+    	int currentLine = -1;
+    	int currentRam = 16;
+    	while(parser.advance()){
+    		currentLine ++;
+    		if(parser.commandType(parser.command()) == CommandType.L_COMMAND ){
+    			String lbl = parser.label(parser.command());
+    			if (!table.contains(lbl)){
+    				table.addEntry(lbl, currentLine+1);
+    			}
+    		} 
+    		else if(parser.commandType(parser.command()) == CommandType.A_COMMAND ){
+    			String symb = parser.symbol(parser.command());
+    			
+    			if((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){ //Root checking if number
 
+    				if (!table.contains(symb)){
+    					table.addEntry(symb, currentRam );
+    					currentRam ++;
+    				}
+    			}	
+    		}
+    	}
+    	
+    }
+    
+    
     /**
      * Segundo passo para a geração do código de máquina
      * Varre o código em busca de instruções do tipo A, C
@@ -56,7 +83,41 @@ public class Assemble {
      */
     public void generateMachineCode() throws FileNotFoundException, IOException{
         Parser parser = new Parser(inputFile);  // abre o arquivo e aponta para o começo
+        Code code1 = new Code();
+        String machineCode = "";
+        while(parser.advance()){
+        	//String symb = parser.command();
+        	machineCode = "";
+        	String[] mnemnonic = parser.instruction(parser.command());
+        	String symb = parser.symbol(parser.command());
+        	if (parser.commandType(parser.command()) == CommandType.A_COMMAND){
+        		System.out.println(symb.charAt(0));
+        		if ((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){
+        			System.out.println("entrou");
+        			
+        			String var =String.valueOf(table.getAddress(symb));
+        			System.out.println(var);
+        			
+        			
+        			machineCode = "0" + code1.toBinary(var);
+        		} else {
+        			machineCode = "0" + code1.toBinary(symb);	
+        		}
+        		outHACK.println(machineCode);
+        		
+        	} else if(parser.commandType(parser.command()) == CommandType.C_COMMAND) {
+			
+			for (int i=0; i <mnemnonic.length; i++){
+				System.out.println((mnemnonic)[i]);
+			}
+			System.out.println(code1.dest(mnemnonic));
+        		machineCode = "1"+ code1.comp(mnemnonic)+code1.dest(mnemnonic)+code1.jump(mnemnonic);
+        		outHACK.println(machineCode);
 
+        	}
+        	        	 
+        }
+        //return machineCode;
     }
 
     /**
@@ -82,3 +143,4 @@ public class Assemble {
     }
 
 }
+
