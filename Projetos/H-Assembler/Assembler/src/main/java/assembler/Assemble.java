@@ -48,29 +48,40 @@ public class Assemble {
      */
     public void fillSymbolTable() throws FileNotFoundException, IOException {
     	Parser parser = new Parser(inputFile);
-    	int currentLine = -1;
+    	int currentLine = 0;
     	int currentRam = 16;
     	while(parser.advance()){
-    		currentLine ++;
+
     		if(parser.commandType(parser.command()) == CommandType.L_COMMAND ){
+    			System.out.println("label" +parser.command());
     			String lbl = parser.label(parser.command());
     			if (!table.contains(lbl)){
-    				table.addEntry(lbl, currentLine+1);
+    				table.addEntry(lbl, currentLine);
+					System.out.println("labeladd" +parser.command());
     			}
     		} 
-    		else if(parser.commandType(parser.command()) == CommandType.A_COMMAND ){
-    			String symb = parser.symbol(parser.command());
-    			
-    			if((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){ //Root checking if number
 
-    				if (!table.contains(symb)){
-    					table.addEntry(symb, currentRam );
-    					currentRam ++;
-    				}
-    			}	
-    		}
+			if (parser.commandType(parser.command()) == CommandType.A_COMMAND || parser.commandType(parser.command()) == CommandType.C_COMMAND){
+    			currentLine++;
+				System.out.println("lineinc-" +parser.command());
+			}
     	}
-    	
+
+    	parser = new Parser(inputFile);
+		while(parser.advance()){
+
+			if(parser.commandType(parser.command()) == CommandType.A_COMMAND ){
+				String symb = parser.symbol(parser.command());
+
+				if((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){ //Root checking if number
+
+					if (!table.contains(symb)){
+						table.addEntry(symb, currentRam );
+						currentRam ++;
+					}
+				}
+			}
+		}
     }
     
     
@@ -143,4 +154,5 @@ public class Assemble {
     }
 
 }
+
 
