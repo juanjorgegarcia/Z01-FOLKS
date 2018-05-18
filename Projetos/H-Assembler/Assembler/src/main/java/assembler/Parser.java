@@ -69,9 +69,9 @@ public class Parser {
                 return true;
             }
 
-            }
-        return false;
         }
+        return false;
+    }
 
 
     /**
@@ -80,6 +80,7 @@ public class Parser {
      */
     public String command() {
     	return this.currentCommand;
+
     }
 
     /**
@@ -130,7 +131,7 @@ public class Parser {
 
             }
         }
-    	return simb;
+        return simb;
     }
 
     /**
@@ -144,7 +145,7 @@ public class Parser {
         if (commandType(command) == CommandType.L_COMMAND) {
             simb = command.substring(0,command.length()-1);
         }
-    	return simb;
+        return simb;
     }
 
     /**
