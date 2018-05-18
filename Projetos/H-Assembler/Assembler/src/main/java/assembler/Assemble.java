@@ -53,17 +53,17 @@ public class Assemble {
     	while(parser.advance()){
 
     		if(parser.commandType(parser.command()) == CommandType.L_COMMAND ){
-    			System.out.println("label" +parser.command());
+
     			String lbl = parser.label(parser.command());
     			if (!table.contains(lbl)){
     				table.addEntry(lbl, currentLine);
-					System.out.println("labeladd" +parser.command());
+
     			}
     		} 
 
 			if (parser.commandType(parser.command()) == CommandType.A_COMMAND || parser.commandType(parser.command()) == CommandType.C_COMMAND){
     			currentLine++;
-				System.out.println("lineinc-" +parser.command());
+
 			}
     	}
 
@@ -102,12 +102,12 @@ public class Assemble {
         	String[] mnemnonic = parser.instruction(parser.command());
         	String symb = parser.symbol(parser.command());
         	if (parser.commandType(parser.command()) == CommandType.A_COMMAND){
-        		System.out.println(symb.charAt(0));
+
         		if ((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){
-        			System.out.println("entrou");
+ 
         			
         			String var =String.valueOf(table.getAddress(symb));
-        			System.out.println(var);
+
         			
         			
         			machineCode = "0" + code1.toBinary(var);
@@ -119,9 +119,9 @@ public class Assemble {
         	} else if(parser.commandType(parser.command()) == CommandType.C_COMMAND) {
 			
 			for (int i=0; i <mnemnonic.length; i++){
-				System.out.println((mnemnonic)[i]);
+
 			}
-			System.out.println(code1.dest(mnemnonic));
+
         		machineCode = "1"+ code1.comp(mnemnonic)+code1.dest(mnemnonic)+code1.jump(mnemnonic);
         		outHACK.println(machineCode);
 

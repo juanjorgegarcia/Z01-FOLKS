@@ -65,7 +65,6 @@ public class Parser {
                     }
 
                 }
-//                System.out.println(tmp);
                 this.currentCommand = tmp.substring(0,(ind));
                 return true;
             }
@@ -80,7 +79,6 @@ public class Parser {
      * @return a instrução atual para ser analilisada
      */
     public String command() {
-        System.out.println(this.currentCommand);
     	return this.currentCommand;
     }
 
