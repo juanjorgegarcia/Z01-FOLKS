@@ -104,13 +104,13 @@ public class Code {
     		binCalc.setCharAt(3, '1');
     		if (mnemnonic[1].equals( "%A") | mnemnonic[1].equals( "(%A)")){
     			binCalc.setCharAt(2, '1');
-    			binCalc.setCharAt(4, '1');
+    			binCalc.setCharAt(3, '1');
     		} else{
-    			binCalc.setCharAt(2, '0');
+    			binCalc.setCharAt(3, '1');
     			binCalc.setCharAt(4, '1');
-				binCalc.setCharAt(5, '1');
-    		}
 
+    		}
+			binCalc.setCharAt(5, '1');
     		binCalc.setCharAt(6, '1');
     		binCalc.setCharAt(7, '1');
     	}

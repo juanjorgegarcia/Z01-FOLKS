@@ -48,29 +48,40 @@ public class Assemble {
      */
     public void fillSymbolTable() throws FileNotFoundException, IOException {
     	Parser parser = new Parser(inputFile);
-    	int currentLine = -1;
+    	int currentLine = 0;
     	int currentRam = 16;
     	while(parser.advance()){
-    		currentLine ++;
+
     		if(parser.commandType(parser.command()) == CommandType.L_COMMAND ){
+
     			String lbl = parser.label(parser.command());
     			if (!table.contains(lbl)){
-    				table.addEntry(lbl, currentLine+1);
+    				table.addEntry(lbl, currentLine);
+
     			}
     		} 
-    		else if(parser.commandType(parser.command()) == CommandType.A_COMMAND ){
-    			String symb = parser.symbol(parser.command());
-    			
-    			if((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){ //Root checking if number
 
-    				if (!table.contains(symb)){
-    					table.addEntry(symb, currentRam );
-    					currentRam ++;
-    				}
-    			}	
-    		}
+			if (parser.commandType(parser.command()) == CommandType.A_COMMAND || parser.commandType(parser.command()) == CommandType.C_COMMAND){
+    			currentLine++;
+
+			}
     	}
-    	
+
+    	parser = new Parser(inputFile);
+		while(parser.advance()){
+
+			if(parser.commandType(parser.command()) == CommandType.A_COMMAND ){
+				String symb = parser.symbol(parser.command());
+
+				if((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){ //Root checking if number
+
+					if (!table.contains(symb)){
+						table.addEntry(symb, currentRam );
+						currentRam ++;
+					}
+				}
+			}
+		}
     }
     
     
@@ -91,12 +102,12 @@ public class Assemble {
         	String[] mnemnonic = parser.instruction(parser.command());
         	String symb = parser.symbol(parser.command());
         	if (parser.commandType(parser.command()) == CommandType.A_COMMAND){
-        		System.out.println(symb.charAt(0));
+
         		if ((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){
-        			System.out.println("entrou");
+ 
         			
         			String var =String.valueOf(table.getAddress(symb));
-        			System.out.println(var);
+
         			
         			
         			machineCode = "0" + code1.toBinary(var);
@@ -108,9 +119,9 @@ public class Assemble {
         	} else if(parser.commandType(parser.command()) == CommandType.C_COMMAND) {
 			
 			for (int i=0; i <mnemnonic.length; i++){
-				System.out.println((mnemnonic)[i]);
+
 			}
-			System.out.println(code1.dest(mnemnonic));
+
         		machineCode = "1"+ code1.comp(mnemnonic)+code1.dest(mnemnonic)+code1.jump(mnemnonic);
         		outHACK.println(machineCode);
 
@@ -143,4 +154,5 @@ public class Assemble {
     }
 
 }
+
 
