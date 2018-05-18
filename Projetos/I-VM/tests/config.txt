@@ -3,7 +3,6 @@
 #--------------------
 # Projeto - Entrega
 #--------------------
-#SimplePopTemp 1 200
 1a-Add 1 500
 1b-Add 1 500
 2a-Calculadora 1 500
