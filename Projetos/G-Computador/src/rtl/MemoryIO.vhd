@@ -110,11 +110,11 @@ DM4 : DMux4way port map (a=>LOAD, sel=>s1,q0=> j0,q1=> j1,q2=>j2,q3=>s3);
 
 RAM : RAM16K port map (address => ADDRESS(13 downto 0), clock=>CLK_FAST,data=> INPUT, wren=> j0,q=>out_ram);
 
-REG16 : Register16 port map (clock=>CLK_SLOW,input=>INPUT ,load=> j1,output=>out_led);
+REG16 : Register16 port map (clock=>CLK_SLOW,input=>INPUT ,load=> j2,output=>out_led);
 
 
 Scr : Screen port map (INPUT=>INPUT,
-	LOAD=>j2,
+	LOAD=>j1,
 	ADDRESS=>ADDRESS(13 downto 0),
 	CLK_FAST=>CLK_FAST,
 	CLK_SLOW=>CLK_SLOW,
@@ -134,6 +134,6 @@ s1 <= "00" when (ADDRESS<="011111111111111") else
 		"11";
 s2 <= '1' when(ADDRESS<="011111111111111") else
 		'0';
-LED<=out_led (9 downto 0);
+LED <= out_led(9 downto 0);
 	
 END;
