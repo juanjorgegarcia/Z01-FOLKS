@@ -34,8 +34,6 @@ SimplePopThis 1 200
 SimplePushAdd 1 200
 SimplePopPointer 1 200
 StackTest 1 4000
-<<<<<<< HEAD
-=======
 
 # nome | quantidade de testes | us de execucao
 # us -> clock = /20
@@ -65,13 +63,10 @@ StackTest 1 4000
 # call, funcoes, goto,
 # label
 #--------------------
->>>>>>> upstream/master
 BasicLoop 1 4000
 SimpleFunction 1 500
 StaticsTest 1 5000
 Mult 1 1000
-<<<<<<< HEAD
-=======
 1a-Add 1 500
 1b-Add 1 500
 2a-Calculadora 1 500
@@ -80,4 +75,4 @@ Mult 1 1000
 2d-Calculadora 1 4000
 SimpleGoto 1 200
 SimpleIfGoto 1 200
->>>>>>> upstream/master
+
