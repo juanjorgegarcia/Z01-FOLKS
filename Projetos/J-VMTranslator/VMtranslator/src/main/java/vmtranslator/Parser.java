@@ -31,7 +31,8 @@ public class Parser {
         C_IF,              // comando if-goto
         C_FUNCTION,        // declaracao de funcao
         C_RETURN,          // retorno de funcao
-        C_CALL             // chamada de funcao
+        C_CALL,             // chamada de funcao
+        C_NONE
     }
 
     /**
@@ -39,7 +40,15 @@ public class Parser {
      * @param file arquivo VM que será feito o parser.
      */
     public Parser(String file) throws FileNotFoundException {
-        this.fileReader = new BufferedReader(new FileReader(file));
+        try{
+
+            this.fileReader = new BufferedReader(new FileReader(file));
+        }
+        catch (FileNotFoundException e){
+            System.out.println("File not found - Error");
+            e.printStackTrace();
+
+        }
     }
 
     /**
@@ -49,6 +58,27 @@ public class Parser {
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
     public Boolean advance() throws IOException {
+
+        String line = fileReader.readLine();
+
+        while(line != null){
+
+            String tmp = line.trim();
+
+            if (!tmp.isEmpty() && tmp.charAt(0) != ';'  ) {  // TODO: Comentario com "//"
+                tmp.replace("\t", "");
+                int ind = tmp.length();
+                for (int i = 0; i <tmp.length() ; i++) {
+                    if (tmp.charAt(i) == ';'){
+                        ind = i-1;
+                    }
+                }
+                this.currentCommand = tmp.substring(0,(ind));
+                return true;
+            }
+
+        }
+        return false;
     }
 
     /**
@@ -56,7 +86,7 @@ public class Parser {
      * @return a instrução atual para ser analilisada
      */
     public String command() {
-      return currentCommand;
+        return currentCommand;
     }
 
     /**
@@ -67,6 +97,38 @@ public class Parser {
      * @return o tipo da instrução.
      */
     public CommandType commandType(String command) {
+
+        if(command.startsWith("push")){
+            return CommandType.C_PUSH;
+        }
+        else if (command.startsWith("pop")){
+            return CommandType.C_POP;
+        }
+        else if (command.startsWith("goto")){
+            return CommandType.C_GOTO;
+        }
+        else if (command.startsWith("if")){
+            return CommandType.C_IF;
+        }
+        else if (command.startsWith("return")){
+            return CommandType.C_RETURN;
+        }
+        else if (command.startsWith("function")){
+            return CommandType.C_FUNCTION;
+        }
+        else if (command.startsWith("call")){
+            return CommandType.C_CALL;
+        }
+        else if (command.startsWith("label")){
+            return CommandType.C_LABEL;
+        }
+        else if (command.startsWith(";") || command.startsWith("//")){
+            return CommandType.C_NONE;
+        }
+        else{
+            return CommandType.C_ARITHMETIC;
+        }
+
     }
 
 
@@ -78,6 +140,18 @@ public class Parser {
      * @return somente o símbolo ou o valor número da instrução.
      */
     public String arg1(String command) {
+        String arg1 = "";
+
+        if(commandType(command) == CommandType.C_ARITHMETIC){
+            arg1 = command;
+
+        }
+        else if(commandType(command) != CommandType.C_RETURN){
+            String[] s = command.split(" ");
+            arg1 = s[1];
+        }
+
+        return arg1;
     }
 
     /**
@@ -87,6 +161,13 @@ public class Parser {
      * @return o símbolo da instrução (sem os dois pontos).
      */
     public Integer arg2(String command) {
+        Integer arg2 = 0;
+        if (commandType(command) == CommandType.C_PUSH || commandType(command) == CommandType.C_POP || commandType(command) == CommandType.C_FUNCTION || commandType(command) == CommandType.C_CALL) {
+
+            String[] s = command.split(" ");
+            arg2 = Integer.valueOf(s[2]);
+        }
+        return arg2;
     }
 
     // fecha o arquivo de leitura
