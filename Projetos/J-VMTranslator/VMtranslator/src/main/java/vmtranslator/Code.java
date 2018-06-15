@@ -84,6 +84,7 @@ public class Code {
         } else if (command.equals("eq")) {
             String label0 = getRandomString();
             String label1 = getRandomString();
+            System.out.println(label0 +" "+ label1);
             commands.add(String.format("; %d - EQ", lineCode++));
             commands.add("leaw $SP, %A");
             commands.add("movw (%A), %A");
@@ -262,29 +263,59 @@ public class Code {
             if (segment.equals("constant")) {
                 Error.error("Não faz sentido POP com constant");
             } else if (segment.equals("local")) {
+                commands.add("leaw $SP, %A");
+                commands.add("movw (%A), %A");
+                commands.add("decw %A");
+                commands.add("movw (%A), %D");
+                commands.add("leaw $LCL, %A");
+                commands.add("movw (%A), %S");
+                commands.add("leaw $"+ index.toString() +", %A");
+                commands.add("addw %A, %S, %A");
+                commands.add("movw %D, (%A)");
+
 
             } else if (segment.equals("argument")) {
 
             } else if (segment.equals("this")) {
-
+                
             } else if (segment.equals("that")) {
 
             } else if (segment.equals("static")) {
 
             } else if (segment.equals("temp")) {
-
+                
             } else if (segment.equals("pointer")) {
                 if(index==0) {
-
+                    commands.add("leaw $SP, %A");
+                    commands.add("movw (%A), %A");
+                    commands.add("decw %A");
+                    commands.add("movw (%A), %D");
+                    commands.add("leaw $THIS, %A");
+                    commands.add("movw %D, (%A)");
                 } else {
-
+                    commands.add("leaw $SP, %A");
+                    commands.add("movw (%A), %A");
+                    commands.add("decw %A");
+                    commands.add("movw (%A), %D");
+                    commands.add("leaw $THAT, %A");
+                    commands.add("movw %D, (%A)");
                 }
             }
         } else if (command == Parser.CommandType.C_PUSH) {
             commands.add(String.format("; %d - PUSH %s %d", lineCode++ ,segment, index));
 
             if (segment.equals("constant")) {
-
+            	String constant = index.toString();
+            	commands.add("leaw $"+ constant +", %A");
+                commands.add("movw %A, %S");
+            	commands.add("leaw $SP, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw %S, (%A)");
+                commands.add("incw %A");
+                commands.add("movw %A, %D");
+                commands.add("leaw $SP, %A");
+                commands.add("movw %D, (%A)");
+                
             } else if (segment.equals("local")) {
 
             } else if (segment.equals("argument")) {
