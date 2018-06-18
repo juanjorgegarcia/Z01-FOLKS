@@ -53,6 +53,7 @@ public class Code {
             commands.add("movw (%A), %S");
             commands.add("decw %A");
             commands.add("addw %S, (%A), %D");
+            commands.add("movw %D, (%A)");
             commands.add("movw %A, %S");
             commands.add("incw %S");
             commands.add("leaw $SP, %A");
@@ -65,7 +66,8 @@ public class Code {
             commands.add("decw %A");
             commands.add("movw (%A), %S");
             commands.add("decw %A");
-            commands.add("subw %S, (%A), %D");
+            commands.add("subw (%A),%S, %D");
+            commands.add("movw %D, (%A)");
             commands.add("movw %A, %S");
             commands.add("incw %S");
             commands.add("leaw $SP, %A");
@@ -76,9 +78,9 @@ public class Code {
             commands.add("leaw $SP, %A");
             commands.add("movw (%A), %A");
             commands.add("decw %A");
-            commands.add("movw(%A),%D");
-            commands.add("negw,%D");
-            commands.add("movw %D,(%A)");
+            commands.add("movw (%A),%D");
+            commands.add("negw %D");
+            commands.add("movw %D, (%A)");
 
 
         } else if (command.equals("eq")) {
@@ -91,7 +93,7 @@ public class Code {
             commands.add("decw %A");
             commands.add("movw (%A), %S");
             commands.add("decw %A");
-            commands.add("subw %S, (%A), %D");
+            commands.add("subw (%A), %S, %D");
             commands.add("leaw $"+label0+", %A");
             commands.add("jne %D");
             commands.add("nop");
@@ -100,11 +102,13 @@ public class Code {
             commands.add("movw %A, %D");
             commands.add("leaw $"+label1+", %A");
             commands.add("jmp");
+            commands.add("nop");
             commands.add(label0+":");
             commands.add("leaw $0, %A");
             commands.add("movw %A, %D");
             commands.add(label1+":");
             commands.add("leaw $SP, %A");
+            commands.add("movw (%A), %A");
             commands.add("decw %A");
             commands.add("decw %A");
             commands.add("movw %D, (%A)");
@@ -123,7 +127,7 @@ public class Code {
             commands.add("decw %A");
             commands.add("movw (%A), %S");
             commands.add("decw %A");
-            commands.add("subw %S, (%A), %D");
+            commands.add("subw (%A),%S , %D");
             commands.add("movw %A, %S");
             commands.add("leaw $"+label0+", %A");
             commands.add("jle %D");
@@ -133,6 +137,7 @@ public class Code {
             commands.add("movw %A, %D");
             commands.add("leaw $"+label1+", %A");
             commands.add("jmp");
+            commands.add("nop");
             commands.add(label0+":");
             commands.add("leaw $0, %A");
             commands.add("movw %A, %D");
@@ -147,22 +152,22 @@ public class Code {
             String label0 = getRandomString();
             String label1 = getRandomString();
             commands.add(String.format("; %d - LT", lineCode++));
-            commands.add(String.format("; %d - GT", lineCode++));
             commands.add("leaw $SP, %A");
             commands.add("movw (%A), %A");
             commands.add("decw %A");
             commands.add("movw (%A), %S");
             commands.add("decw %A");
-            commands.add("subw %S, (%A), %D");
+            commands.add("subw %S,(%A),%D");
             commands.add("movw %A, %S");
             commands.add("leaw $"+label0+", %A");
-            commands.add("jge %D");
+            commands.add("jle %D");
             commands.add("nop");
             commands.add("leaw $1, %A");
             commands.add("negw %A");
             commands.add("movw %A, %D");
             commands.add("leaw $"+label1+", %A");
             commands.add("jmp");
+            commands.add("nop");
             commands.add(label0+":");
             commands.add("leaw $0, %A");
             commands.add("movw %A, %D");
@@ -181,6 +186,7 @@ public class Code {
             commands.add("movw (%A), %S");
             commands.add("decw %A");
             commands.add("andw %S, (%A), %D");
+            commands.add("movw %D, (%A)");
             commands.add("movw %A, %S");
             commands.add("incw %S");
             commands.add("leaw $SP, %A");
@@ -195,6 +201,7 @@ public class Code {
             commands.add("movw (%A), %S");
             commands.add("decw %A");
             commands.add("orw %S, (%A), %D");
+            commands.add("movw %D, (%A)");
             commands.add("movw %A, %S");
             commands.add("incw %S");
             commands.add("leaw $SP, %A");
@@ -237,15 +244,20 @@ public class Code {
             if (segment.equals("constant")) {
                 Error.error("Não faz sentido POP com constant");
             } else if (segment.equals("local")) {
+
+
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
                 commands.add("decw %A");
                 commands.add("movw (%A), %D");
-                commands.add("leaw $LCL, %A");
-                commands.add("movw (%A), %S");
+                commands.add("movw %A, %S");
+                commands.add("leaw $SP, %A");
+                commands.add("movw %S, (%A)");
                 commands.add("leaw $"+ index.toString() +", %A");
-                commands.add("addw %A, %S, %A");
-                commands.add("movw %D, (%A)");
+                commands.add("movw %A , %S");
+                commands.add("leaw $LCL, %A");
+                commands.add("addw %S, (%A), %A");
+                commands.add("movw %D , (%A)");
 
 
             } else if (segment.equals("argument")) {
@@ -260,38 +272,52 @@ public class Code {
                 commands.add("movw %D, (%A)");
 
             } else if (segment.equals("this")) {
+
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
                 commands.add("decw %A");
                 commands.add("movw (%A), %D");
+                commands.add("movw %A, %S");
+                commands.add("leaw $SP, %A");
+                commands.add("movw %S, (%A)");
+                commands.add("leaw $"+ index.toString() +", %A");
+                commands.add("movw %A , %S");
                 commands.add("leaw $THIS, %A");
-                commands.add("movw (%A), %S");
-                commands.add("leaw $"+ index.toString() +", %A");
-                commands.add("addw %A, %S, %A");
-                commands.add("movw %D, (%A)");
-                
+                commands.add("addw %S, (%A), %A");
+                commands.add("movw %D , (%A)");
+
             } else if (segment.equals("that")) {
+
+
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
                 commands.add("decw %A");
                 commands.add("movw (%A), %D");
-                commands.add("leaw $THAT, %A");
-                commands.add("movw (%A), %S");
+                commands.add("movw %A, %S");
+                commands.add("leaw $SP, %A");
+                commands.add("movw %S, (%A)");
                 commands.add("leaw $"+ index.toString() +", %A");
-                commands.add("addw %A, %S, %A");
-                commands.add("movw %D, (%A)");
+                commands.add("movw %A , %S");
+                commands.add("leaw $THAT, %A");
+                commands.add("addw %S, (%A), %A");
+                commands.add("movw %D , (%A)");
 
             } else if (segment.equals("static")) {
                 String location = filename + "-" +  index.toString();
+
+
+
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
                 commands.add("decw %A");
                 commands.add("movw (%A), %D");
-                commands.add("leaw $LCL, %A");
-                commands.add("movw (%A), %S");
+                commands.add("movw %A, %S");
+                commands.add("leaw $SP, %A");
+                commands.add("movw %S, (%A)");
                 commands.add("leaw $"+ location +", %A");
-                commands.add("addw %A, %S, %A");
-                commands.add("movw %D, (%A)");
+                commands.add("leaw $LCL, %A");
+                commands.add("addw %S, (%A), %D");
+                commands.add("movw %D , (%A)");
 
 
             } else if (segment.equals("temp")) {
@@ -299,18 +325,26 @@ public class Code {
                 commands.add("movw (%A), %A");
                 commands.add("decw %A");
                 commands.add("movw (%A), %D");
-                commands.add("leaw $R5, %A"); // R5 = Temp 0
-                commands.add("movw (%A), %S");
+                commands.add("movw %A, %S");
+                commands.add("leaw $SP, %A");
+                commands.add("movw %S, (%A)");
                 commands.add("leaw $"+ index.toString() +", %A");
-                commands.add("addw %A, %S, %A");
-                commands.add("movw %D, (%A)");
-                
+                commands.add("movw %A , %S");
+                commands.add("leaw $R5, %A");
+                commands.add("addw %S, %A, %A");
+                commands.add("movw %D , (%A)");
+
+
             } else if (segment.equals("pointer")) {
                 if(index==0) {
                     commands.add("leaw $SP, %A");
                     commands.add("movw (%A), %A");
                     commands.add("decw %A");
                     commands.add("movw (%A), %D");
+                    commands.add("movw %A, %S");
+                    commands.add("leaw $SP, %A");
+                    commands.add("movw %S, (%A)");
+
                     commands.add("leaw $THIS, %A");
                     commands.add("movw %D, (%A)");
                 } else {
@@ -318,6 +352,10 @@ public class Code {
                     commands.add("movw (%A), %A");
                     commands.add("decw %A");
                     commands.add("movw (%A), %D");
+                    commands.add("movw %A, %S");
+                    commands.add("leaw $SP, %A");
+                    commands.add("movw %S, (%A)");
+
                     commands.add("leaw $THAT, %A");
                     commands.add("movw %D, (%A)");
                 }
@@ -326,17 +364,17 @@ public class Code {
             commands.add(String.format("; %d - PUSH %s %d", lineCode++ ,segment, index));
 
             if (segment.equals("constant")) {
-            	String constant = index.toString();
-            	commands.add("leaw $"+ constant +", %A");
+                String constant = index.toString();
+                commands.add("leaw $"+ constant +", %A");
                 commands.add("movw %A, %S");
-            	commands.add("leaw $SP, %A");
+                commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
                 commands.add("movw %S, (%A)");
                 commands.add("incw %A");
                 commands.add("movw %A, %D");
                 commands.add("leaw $SP, %A");
                 commands.add("movw %D, (%A)");
-                
+
             } else if (segment.equals("local")) {
                 String constant = index.toString();
                 commands.add("leaw $LCL, %A");
@@ -399,9 +437,10 @@ public class Code {
 
             } else if (segment.equals("static")) {
                 String location = filename + "-" +  index.toString();
-                //String constant = index.toString();
-                commands.add("leaw $LCL, %A");
-                commands.add("movw (%A), %D");
+                String constant = index.toString();
+
+                commands.add("leaw $"+constant+", %A");
+                commands.add("movw %A, %D");
                 commands.add("leaw $"+ location +", %A");
                 commands.add("addw %D, %A, %A");
                 commands.add("movw (%A), %S");
@@ -416,7 +455,7 @@ public class Code {
             } else if (segment.equals("temp")) {
                 String constant = index.toString();
                 commands.add("leaw $R5, %A");
-                commands.add("movw (%A), %D");
+                commands.add("movw %A, %D");
                 commands.add("leaw $"+ constant +", %A");
                 commands.add("addw %D, %A, %A");
                 commands.add("movw (%A), %S");
@@ -434,7 +473,7 @@ public class Code {
                     commands.add("movw (%A), %D");
                     commands.add("leaw $SP, %A");
                     commands.add("movw (%A), %A");
-                    commands.add("movw %D, (%A)"); 
+                    commands.add("movw %D, (%A)");
                     commands.add("incw %A");
                     commands.add("movw %A, %D");
                     commands.add("leaw $SP, %A");
@@ -504,6 +543,11 @@ public class Code {
 
         List<String> commands = new ArrayList<String>();
         commands.add( "; Label (marcador)" );
+        commands.add( filename + label+ ":" );
+
+        String[] stringArray = new String[ commands.size() ];
+        commands.toArray( stringArray );
+        write(stringArray);
 
     }
 
@@ -516,6 +560,14 @@ public class Code {
 
         List<String> commands = new ArrayList<String>();
         commands.add(String.format("; %d - Goto Incondicional", lineCode++));
+        commands.add("leaw $" + filename + label + ", %A");
+        commands.add("jmp");
+        commands.add("nop");
+
+        String[] stringArray = new String[ commands.size() ];
+        commands.toArray( stringArray );
+        write(stringArray);
+
 
     }
 
@@ -528,6 +580,24 @@ public class Code {
 
         List<String> commands = new ArrayList<String>();
         commands.add(String.format("; %d - Goto Condicional", lineCode++));
+        //commands.add();
+        commands.add("leaw $SP, %A");
+        commands.add("movw (%A), %S");
+        commands.add("decw %S");
+        commands.add("movw %S, (%A)");
+        commands.add("movw %S, %A");
+        commands.add("movw (%A), %D");
+        commands.add("leaw $"+ filename + label+", %A");
+        commands.add("jne %D");
+        commands.add("nop");
+
+
+
+
+        String[] stringArray = new String[ commands.size() ];
+        commands.toArray( stringArray );
+        write(stringArray);
+
 
     }
 
@@ -596,7 +666,7 @@ public class Code {
         SecureRandom secureRandom = new SecureRandom();
         byte[] token = new byte[10];
         secureRandom.nextBytes(token);
-      	String randomString = new BigInteger(1, token).toString(16); 
+        String randomString = new BigInteger(1, token).toString(16);
         return  "lbl" + randomString;//hex encoding
     }
 
