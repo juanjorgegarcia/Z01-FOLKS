@@ -282,7 +282,7 @@ public class Code {
                 commands.add("movw %D, (%A)");
 
             } else if (segment.equals("static")) {
-                String location = filename + "-" +  index.toString()
+                String location = filename + "-" +  index.toString();
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
                 commands.add("decw %A");
@@ -342,7 +342,7 @@ public class Code {
                 commands.add("leaw $LCL, %A");
                 commands.add("movw (%A), %D");
                 commands.add("leaw $"+ constant +", %A");
-                commands.add("addw %D, %A, %A")
+                commands.add("addw %D, %A, %A");
                 commands.add("movw (%A), %S");
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
@@ -357,7 +357,7 @@ public class Code {
                 commands.add("leaw $ARG, %A");
                 commands.add("movw (%A), %D");
                 commands.add("leaw $"+ constant +", %A");
-                commands.add("addw %D, %A, %A")
+                commands.add("addw %D, %A, %A");
                 commands.add("movw (%A), %S");
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
@@ -372,7 +372,7 @@ public class Code {
                 commands.add("leaw $THIS, %A");
                 commands.add("movw (%A), %D");
                 commands.add("leaw $"+ constant +", %A");
-                commands.add("addw %D, %A, %A")
+                commands.add("addw %D, %A, %A");
                 commands.add("movw (%A), %S");
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
@@ -387,7 +387,7 @@ public class Code {
                 commands.add("leaw $THAT, %A");
                 commands.add("movw (%A), %D");
                 commands.add("leaw $"+ constant +", %A");
-                commands.add("addw %D, %A, %A")
+                commands.add("addw %D, %A, %A");
                 commands.add("movw (%A), %S");
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
@@ -398,12 +398,12 @@ public class Code {
                 commands.add("movw %D, (%A)");
 
             } else if (segment.equals("static")) {
-                String location = filename + "-" +  index.toString()
+                String location = filename + "-" +  index.toString();
                 //String constant = index.toString();
                 commands.add("leaw $LCL, %A");
                 commands.add("movw (%A), %D");
                 commands.add("leaw $"+ location +", %A");
-                commands.add("addw %D, %A, %A")
+                commands.add("addw %D, %A, %A");
                 commands.add("movw (%A), %S");
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
@@ -418,7 +418,7 @@ public class Code {
                 commands.add("leaw $R5, %A");
                 commands.add("movw (%A), %D");
                 commands.add("leaw $"+ constant +", %A");
-                commands.add("addw %D, %A, %A")
+                commands.add("addw %D, %A, %A");
                 commands.add("movw (%A), %S");
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
@@ -445,7 +445,7 @@ public class Code {
                     commands.add("leaw $THIS, %A");
                     commands.add("movw %A, %D");
                     commands.add("leaw $"+ constant +", %A");
-                    commands.add("addw %D, %A, %A")
+                    commands.add("addw %D, %A, %A");
                     commands.add("movw (%A), %S");
                     commands.add("leaw $SP, %A");
                     commands.add("movw (%A), %A");
@@ -596,8 +596,8 @@ public class Code {
         SecureRandom secureRandom = new SecureRandom();
         byte[] token = new byte[10];
         secureRandom.nextBytes(token);
-      	String randonString = new BigInteger(1, token).toString(16); 
-        return  "lbl" + randomString//hex encoding
+      	String randomString = new BigInteger(1, token).toString(16); 
+        return  "lbl" + randomString;//hex encoding
     }
 
 }

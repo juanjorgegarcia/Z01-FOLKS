@@ -65,7 +65,7 @@ public class Parser {
 
             String tmp = line.trim();
 
-            if (!tmp.isEmpty() && tmp.charAt(0) != ';'  ) {  // TODO: Comentario com "//"
+            if (!tmp.isEmpty() && tmp.charAt(0) != ';'  && tmp.charAt(0) != '/' ) {  // TODO: Comentario com "//"
                 tmp.replace("\t", "");
                 int ind = tmp.length();
                 for (int i = 0; i <tmp.length() ; i++) {
