@@ -596,7 +596,8 @@ public class Code {
         SecureRandom secureRandom = new SecureRandom();
         byte[] token = new byte[10];
         secureRandom.nextBytes(token);
-        return new BigInteger(1, token).toString(16); //hex encoding
+      	String randonString = new BigInteger(1, token).toString(16); 
+        return  "lbl" + randomString//hex encoding
     }
 
 }
