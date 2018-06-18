@@ -45,6 +45,6 @@ script:
   - python Projetos/0-Infra/testeVHDL.py
   - python Projetos/C-LogicaCombinacional/script/testeLogicaCombinacional.py
   - python Projetos/H-Assembler/scripts/testeAssemblyMyAssembler.py
-  - python Projetos/G-Computador/script/testeAssemblyMyCPU.py
+  - travis_wait 30 python Projetos/G-Computador/script/testeAssemblyMyCPU.py
   - python Projetos/I-VM/scripts/testeVm.py
-  - python Projetos/J-VMTranslator/scripts/testeVmMyTranslator.py
+  - travis_wait python Projetos/J-VMTranslator/scripts/testeVmMyTranslator.py
